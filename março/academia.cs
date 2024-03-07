@@ -9,12 +9,15 @@ public class Academia
     private int Esteira;
     private int Halter;
     private bool Aberta;
+    private int Professor;
     
-    public Academia(int Supino, int Esteira, int Halter)
+    
+    public Academia(int Supino, int Esteira, int Halter, int Professor)
     {
         this.Supino = Supino;
         this.Esteira = Esteira;
         this.Halter = Halter;
+        this.Professor = Professor;
         this.Aberta = true;
     }
         public void Abrir()
@@ -87,14 +90,32 @@ public class Academia
             get => Halter;
             set => Halter = value;
         }
+        
+        public int getProfessor
+        {
+            get => Professor;
+            set => Professor = value;
+        }
 }
 
 public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        Academia estacaoX = new Academia(7, 8, 9);
+        Academia estacaoX = new Academia(7, 8, 9, 3);
      
-        Console.WriteLine($"Peso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}");
+        Console.WriteLine($"Peso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
+        
+        Academia Skin = new Academia(5, 8, 14, 8);
+        
+        if(Skin.getProfessor > estacaoX.getProfessor)
+        {
+            Console.WriteLine("A academia estacao X e melhor que a skin");
+        }
+        else
+        {
+            Console.WriteLine("A academia skin é melhor que a estacao X");
+        }
     }
+        
 }
