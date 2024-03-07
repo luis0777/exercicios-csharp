@@ -103,10 +103,12 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         Academia estacaoX = new Academia(7, 8, 9, 3);
-     
+        Console.WriteLine("ESTACAO X");
         Console.WriteLine($"Peso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
         
         Academia Skin = new Academia(5, 8, 14, 8);
+        
+        Console.WriteLine($"\nPeso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
         
         if(Skin.getProfessor > estacaoX.getProfessor)
         {
