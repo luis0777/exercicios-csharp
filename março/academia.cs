@@ -110,11 +110,11 @@ public class HelloWorld
         
         if(Skin.getProfessor > estacaoX.getProfessor)
         {
-            Console.WriteLine("A academia estacao X e melhor que a skin");
+            Console.WriteLine("\nA academia skin e melhor que a estacao X pois tem mais professores");
         }
         else
         {
-            Console.WriteLine("A academia skin é melhor que a estacao X");
+            Console.WriteLine("A academia estacao X é melhor que a skin pois tem mais professores");
         }
     }
         
