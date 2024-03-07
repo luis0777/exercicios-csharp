@@ -96,6 +96,41 @@ public class Academia
             get => Professor;
             set => Professor = value;
         }
+        
+        public int treinarSupino(int pesoAtual)
+        {
+            int repeticao = 0;
+            while(repeticao <= pesoAtual++)
+            {
+                Console.WriteLine("Pressione [X] para realizar uma repeticao");
+                
+                string rep = Console.ReadLine();
+                
+                if(rep.ToLower() == "x")
+                {
+                    Console.WriteLine($"Repeticao: {repeticao}");
+                Console.Clear();
+                     repeticao++;
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Voce falhou");
+                    break;
+                }
+
+                if(repeticao == pesoAtual - 1)
+                    Console.Write("BORA BORA BORA MAIS UMA");
+
+            }
+                if(repeticao > getSupino)
+                {
+                        getSupino = repeticao;
+                        return 0;
+                }
+                else
+                    return 0;
+        }
 }
 
 public class HelloWorld
@@ -103,12 +138,13 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         Academia estacaoX = new Academia(7, 8, 9, 3);
-        Console.WriteLine("ESTACAO X");
-        Console.WriteLine($"Peso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
+       // Console.WriteLine("ESTACAO X");
+        //Console.WriteLine($"Peso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
         
         Academia Skin = new Academia(5, 8, 14, 8);
         
-        Console.WriteLine($"\nPeso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
+       // Console.WriteLine("ACADEMIA SKIN");
+       // Console.WriteLine($"\nPeso do supino {estacaoX.getSupino}\nPeso do halter {estacaoX.getHalter}\nQuantidade de esteira {estacaoX.getEsteira}\nNa academia tem {estacaoX.getProfessor} Professores");
         
         if(Skin.getProfessor > estacaoX.getProfessor)
         {
@@ -118,6 +154,10 @@ public class HelloWorld
         {
             Console.WriteLine("A academia estacao X é melhor que a skin pois tem mais professores");
         }
+        
+        Skin.treinarSupino(Skin.getSupino);
+        
+        Console.WriteLine($"PR Supino: {Skin.getSupino}");
     }
         
 }
