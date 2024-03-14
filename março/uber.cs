@@ -41,8 +41,23 @@ public class Uber
 
         switch (Resposta.ToLower())
             {
-            case 'sim':
-                Console.WriteLine("");
+            case "Sim":
+                Console.WriteLine("Ira precisar de troco? Digite sim ou não");
+                string Troco; 
+                Troco = Console.ReadLine(); 
+                if(Troco.ToLower() == "sim")
+                {
+                    float dinheiro;
+                    Console.WriteLine("Precisa de troco para quanto?");
+                    dinheiro = Convert.ToInt32(Console.ReadLine());
+                    float devolver = Corrida - dinheiro;
+                    Console.WriteLine($"Seu troco é R${devolver}");
+                }
+                else
+                {
+
+                }
+
         }
     }
 
